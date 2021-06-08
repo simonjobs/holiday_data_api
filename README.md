@@ -1,6 +1,6 @@
-##This project have been done following the instructions in "Case Study - Data Engineering"  
+# This project have been done following the instructions in "Case Study - Data Engineering"  
 
-##The project contains:  
+## The project contains:  
 One folder containing a flask api application with all neccesarry files to build a docker image  
 One additional Python script for data collection.  
 Two notebooks used when prototyping the scripts  
@@ -11,7 +11,7 @@ One readme
 	   Wether a certain date in a certain country is a holiday  
 	   A summary of number of holiday days per country and year in the 'database'  
  
-##Getting started:  
+## Getting started:  
 To start scraping holiday data go to scrape.py directory and run "python3 scrape.py"  
 
 To create docker image for API run "docker build --tag <NAME> <PATH>"  
@@ -19,12 +19,12 @@ When completed run docker image through "docker run -p 5000:5000 <NAME>"
 Browse to 0.0.0.0:5000 to check connectivity  
 
 
-##API documentation:  
+## API documentation:  
 Possible end-points:  
 	* /api  
 	* /api/summary  
 
-###/api  
+### /api  
 Takes two parameters 'ISO' and 'date', a request will fail if not both parameters are set.  
 Parameters values are not case sensitive.  
 If there is a match in the 'database' on country and date "True" will be returned, else "False".  
@@ -37,11 +37,11 @@ http://0.0.0.0:5000/api?country=AFG&date=2021-02-02	- False // Not a holiday
 http://0.0.0.0:5000/api?country=bgr&date=1990-01-24 - False // No data on this year  
 http://0.0.0.0:5000/api?country=XXX&date=1990-01-24 - False // No data on this country or year  
 
-###/api/summary  
+### /api/summary  
 Returns a JSON with two permanent columns, country and iso as well as one country for each year in 'database'  
 
 
-###Available countries by ISO:  
+### Available countries by ISO:  
 	   'AFG', 'ALB', 'DZA', 'ASM', 'AND', 'AGO', 'AIA', 'ATG', 'ARG',  
        'ARM', 'ABW', 'AUS', 'AUT', 'AZE', 'BHR', 'BGD', 'BRB', 'BLR',  
        'BEL', 'BLZ', 'BEN', 'BMU', 'BTN', 'BES', 'BIH', 'BWA', 'BRA',  
@@ -64,6 +64,6 @@ Returns a JSON with two permanent columns, country and iso as well as one countr
        'URY', 'UZB', 'VUT', 'WLF', 'YEM', 'ZMB', 'ZWE'  
 
 
-###Known bugs and faults:  
+### Known bugs and faults:  
 * Merge in scrape.py causes data from around 40 countries to disappear e.g. USA due to naming differences between ISO name and scraped name. Can be fixed with manual work.  
 
