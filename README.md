@@ -1,4 +1,4 @@
-# This project have been done following the instructions in "Case Study - Data Engineering"  
+# Case Study - Data Engineering
 
 ## The project contains:  
 One folder containing a flask api application with all neccesarry files to build a docker image  
@@ -14,8 +14,8 @@ One readme
 ## Getting started:  
 To start scraping holiday data go to scrape.py directory and run "python3 scrape.py"  
 
-To create docker image for API run "docker build --tag <NAME> <PATH>"  
-When completed run docker image through "docker run -p 5000:5000 <NAME>"  
+To create docker image for API run "docker build --tag NAME PATH"  
+When completed run docker image through "docker run -p 5000:5000 NAME"  
 Browse to 0.0.0.0:5000 to check connectivity  
 
 
