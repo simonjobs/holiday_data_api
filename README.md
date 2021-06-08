@@ -1,4 +1,4 @@
-# This project have been done following the instructions in "Case Study - Data Engineering"  
+# Case Study - Data Engineering
 
 ## The project contains:  
 One folder containing a flask api application with all neccesarry files to build a docker image  
