@@ -14,8 +14,8 @@ One readme
 ## Getting started:  
 To start scraping holiday data go to scrape.py directory and run "python3 scrape.py"  
 
-To create docker image for API run "docker build --tag <NAME> <PATH>"  
-When completed run docker image through "docker run -p 5000:5000 <NAME>"  
+To create docker image for API run "docker build --tag NAME PATH"  
+When completed run docker image through "docker run -p 5000:5000 NAME"  
 Browse to 0.0.0.0:5000 to check connectivity  
 
 
